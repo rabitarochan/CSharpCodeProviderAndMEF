@@ -1,0 +1,11 @@
+﻿using System.ComponentModel.Composition;
+using CSharpCodeProviderAndMEF;
+
+[Export("@(Model.Id)", typeof(IMessage))]
+public class @(Model.Id)Message : IMessage
+{
+    public string GetMessage()
+    {
+        return @@"@(Model.Message)";
+    }
+}
